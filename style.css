@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* General layout */
+.container {
+	width: 90%;
+	max-width: 375px;
+	margin: 0 auto;
+	padding: 2em 0;
+}
+
+/* main header */
+.header {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 6em;
+}
+
+.main-title {
+	font-family: 'PT Serif', serif;
+}
+
+.text-title {
+	font-weight: 600;
+}
+
+/* image gallery */
+.team {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	row-gap: 1em;
+}
+
+.image {
+	padding: 2em;
+}
+
+.name {
+	font-size: 14px;
+}
+
+.image {
+	position: relative;
+}
+
+.info {
+	position: absolute;
+	width: 80px;
+	top: 18.5%;
+	left: 66%;
+	transform: rotate(90deg);
+	font-size: 10px;
+}
+
+.owner,
+.lead,
+.developer1 {
+	margin-top: -100px;
+}
+
+.owner .info,
+.lead .info,
+.developer1 .info {
+	top: 14%;
+}
+
+/* media query */
+@media (min-width: 650px) {
+	.container {
+		max-width: 1440px;
+	}
+	.team {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.developer1 {
+		margin-top: 80px;
+	}
+
+	.info {
+		top: 12.5%;
+		left: 78%;
+	}
+
+	.owner .info,
+	.lead .info,
+	.developer1 .info {
+		top: 10%;
+	}
+}
