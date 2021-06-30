@@ -14,6 +14,7 @@ body {
 
 img {
 	max-width: 100%;
+	display: block;
 }
 
 /* General layout */
@@ -48,14 +49,11 @@ img {
 
 .image {
 	padding: 2em;
+	position: relative;
 }
 
 .name {
 	font-size: 14px;
-}
-
-.image {
-	position: relative;
 }
 
 .info {
@@ -84,6 +82,16 @@ img {
 	.container {
 		max-width: 1440px;
 	}
+
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.header-text {
+		max-width: 35ch;
+	}
+
 	.team {
 		grid-template-columns: repeat(3, 1fr);
 	}
@@ -94,12 +102,16 @@ img {
 
 	.info {
 		top: 12.5%;
-		left: 78%;
+		left: 66%;
 	}
 
 	.owner .info,
 	.lead .info,
 	.developer1 .info {
-		top: 10%;
+		top: 14%;
+	}
+
+	.image {
+		max-width: 190px;
 	}
 }
